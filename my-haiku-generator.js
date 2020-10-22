@@ -19,9 +19,21 @@ const haiku = {
           'enjoying the lake',]
 }
 
-// Creates a haiku and logs to the console
-function generateHaiku(line1, line2, line3) {
-  console.log('A simple haiku ...');
-  console.log(`\t${line1}\n\t${line2}\n\t${line3}\n`);
+// Line selector
+function randomLine(lineArr) {
+  const randIndex = Math.floor(Math.random() * 5);
+  return lineArr[randIndex];
 }
 
+// Creates a haiku and logs to the console
+function generateHaiku() {
+  const rLine1 = randomLine(haiku.line1);
+  const rLine2 = randomLine(haiku.line2);
+  const rLine3 = randomLine(haiku.line3);
+
+  console.log('A simple haiku ...');
+  console.log(`\t${rLine1}\n\t${rLine2}\n\t${rLine3}\n`);
+}
+
+// Function call
+generateHaiku();
