@@ -1,5 +1,3 @@
-console.log('A simple haiku ...\n');
-
 // Object comprised of 3 arrays, each representing 1 line of haiku
 const haiku = {
   line1: ['Night godforsaken',
@@ -21,6 +19,9 @@ const haiku = {
           'enjoying the lake',]
 }
 
+// Creates a haiku and logs to the console
 function generateHaiku(line1, line2, line3) {
-  return `${line1}\n${line2}\n${line3}`;
+  console.log('A simple haiku ...');
+  console.log(`\t${line1}\n\t${line2}\n\t${line3}\n`);
 }
+
